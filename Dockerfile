@@ -6,8 +6,9 @@ ENV RUST_USER=rust \
     RUST_HOME=/source \
     RUST_CHANNEL=stable
 
-# Update CentOS
-RUN yum update -y
+# Update CentOS and install gcc
+RUN yum update -y && \
+    yum install gcc.x86_64 -y
 
 # Add user to run Rust compiler / create folders / change owner
 RUN useradd -m $RUST_USER && \
