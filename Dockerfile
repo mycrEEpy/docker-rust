@@ -14,7 +14,7 @@ RUN useradd -m $RUST_USER && \
     mkdir $RUST_HOME
 
 # Download and install Rust
-RUN curl -sSf https://static.rust-lang.org/rustup.sh | sh -s -- --channel=$RUST_CHANNEL --yes
+RUN curl -sSf https://static.rust-lang.org/rustup.sh | sh -s -- --channel=$RUST_CHANNEL --yes --disable-sudo
 
 # Bypass union filesystem for source code
 VOLUME $RUST_HOME
