@@ -3,7 +3,7 @@ MAINTAINER Tobias Germer
 
 # Environment variables
 ENV RUST_USER=rust \
-    RUST_HOME=/source
+    RUST_HOME=/source \
     RUST_CHANNEL=stable
 
 # Update CentOS
