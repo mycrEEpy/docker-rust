@@ -7,7 +7,7 @@ ENV RUST_HOME=/source \
 
 WORKDIR $RUST_HOME
 
-RUN yum install wget gcc -y
+RUN yum install wget gcc -y && yum clean all
 RUN wget https://static.rust-lang.org/dist/rust-$RUST_VERSION-x86_64-unknown-linux-gnu.tar.gz && \
     tar xfz rust-$RUST_VERSION-x86_64-unknown-linux-gnu.tar.gz && \
     $RUST_HOME/rust-$RUST_VERSION-x86_64-unknown-linux-gnu/install.sh && \
