@@ -2,7 +2,7 @@ FROM centos:7
 MAINTAINER Tobias Germer
 
 ENV RUST_HOME=/source \
-    RUST_VERSION=1.8.0 \
+    RUST_VERSION=1.9.0 \
     USER=nobody
 
 WORKDIR $RUST_HOME
